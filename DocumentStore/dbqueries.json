@@ -1,0 +1,29 @@
+
+
+
+//finding sentences with keyword
+
+{
+    $and: [
+        { "content": { $regex: "support"
+            }
+        },
+        { "content": { $regex: "farm"
+            }
+        }
+    ]
+}
+
+
+
+
+
+
+//user's displayname or location match the keyword
+
+{
+    $or: [
+        { "user.location": { $regex: "Shashi"}},
+        { "user.displayname": { $regex: "Shashi"}}
+    ]
+}
